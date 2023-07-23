@@ -1,0 +1,10 @@
+export './busqueda_manual.dart';
+export './equipo.dart';
+export './equipos.dart';
+export './qrscan.dart';
+export './screen.dart';
+export './equipo_info.dart';
+export './mantencion/mantencion.dart';
+export './mantencion/mantenciones.dart';
+export './movimientos/movimiento.dart';
+export './movimientos/movimientos.dart';
