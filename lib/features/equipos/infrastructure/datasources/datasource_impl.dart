@@ -6,7 +6,7 @@ import 'package:trazabilidad/features/equipos/infrastructure/models/index.dart';
 
 class EquiposDatasourceImpl extends EquiposDatasource {
   final dio = Dio(
-    BaseOptions(baseUrl: 'http://192.168.100.22:3002/api/'),
+    BaseOptions(baseUrl: 'http://10.6.22.9:3002/traza/equipos/'),
   );
 
   @override

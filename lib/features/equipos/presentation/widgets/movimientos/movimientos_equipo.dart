@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:trazabilidad/features/equipos/datasource/entities/movimiento.dart';
-
+import 'package:intl/intl.dart';
 
 class MovimientoEquiposW extends StatelessWidget {
   final List<MovimientoEquipo> movimentos;
@@ -41,6 +41,7 @@ class _ListMovimiento extends StatelessWidget {
               style: const TextStyle(
                 fontSize: 18.0,
                 fontWeight: FontWeight.bold,
+                color: Colors.blueGrey,
               ),
             ),
             const SizedBox(height: 8.0),
@@ -48,15 +49,23 @@ class _ListMovimiento extends StatelessWidget {
               movimiento.detalles,
               style: const TextStyle(
                 fontSize: 16.0,
+                color: Colors.black,
               ),
             ),
             const SizedBox(height: 8.0),
             Text(
-              movimiento.recinto,
+              DateFormat('dd/MM/yyyy HH:mm').format(movimiento.fecha),
               style: TextStyle(
-                fontSize: 16.0,
+                fontSize: 14.0,
                 color: Colors.grey[600],
               ),
+            ),
+            const SizedBox(height: 8.0),
+            // added a divider
+            Divider(
+              color: Colors.grey[300],
+              height: 1.0,
+              thickness: 1.0,
             ),
           ],
         ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:trazabilidad/features/equipos/datasource/entities/index.dart';
 
 class MantencionEquipoW extends StatelessWidget {
@@ -54,6 +55,13 @@ class _ListMantenciones extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 8.0),
+          Text(
+            DateFormat('dd/MM/yyyy').format(mantencion.fecha),
+            style: TextStyle(
+              fontSize: 14.0,
+              color: Colors.grey[600],
+            ),
+          ),
         ]),
       ),
     );

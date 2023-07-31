@@ -7,7 +7,10 @@ class MantencionEquipoScreen extends ConsumerStatefulWidget {
   static const name = 'mantencionequipo-screen';
 
   final String serial;
-  const MantencionEquipoScreen({super.key, required this.serial});
+  const MantencionEquipoScreen({
+    super.key,
+    required this.serial,
+  });
 
   @override
   MantencionEquipoScreenState createState() => MantencionEquipoScreenState();
@@ -33,15 +36,26 @@ class MantencionEquipoScreenState
     }
     return Scaffold(
       appBar: AppBar(
-        title: Text('Mantenciones serie ${widget.serial} '),
-        backgroundColor: Colors.blueGrey, // Cambia el color del AppBar
+        title: Text('Mantenciones serie ${widget.serial}'),
+        backgroundColor: Colors.blueGrey,
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          const SizedBox(height: 20),
-          MantencionEquipoW(mantenciones: mantencion)
-        ]),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const SizedBox(height: 20),
+            // added a divider
+            Divider(
+              color: Colors.grey[300],
+              height: 1.0,
+              thickness: 1.0,
+            ),
+            MantencionEquipoW(
+              mantenciones: mantencion,
+            ),
+          ],
+        ),
       ),
     );
   }

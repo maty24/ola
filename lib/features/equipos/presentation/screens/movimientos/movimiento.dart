@@ -7,8 +7,10 @@ class MovimientoEquipoScreen extends ConsumerStatefulWidget {
   static const name = 'movimientoequipo-screen';
 
   final String serial;
-  const MovimientoEquipoScreen({Key? key, required this.serial})
-      : super(key: key);
+  const MovimientoEquipoScreen({
+    Key? key,
+    required this.serial,
+  }) : super(key: key);
 
   @override
   MovimientoEquipoState createState() => MovimientoEquipoState();
@@ -33,7 +35,9 @@ class MovimientoEquipoState extends ConsumerState<MovimientoEquipoScreen> {
     }
     return Scaffold(
       appBar: AppBar(
-        title: Text('Movientos serie ${widget.serial} '),
+        title: Text(
+          'Movientos serie ${widget.serial} ',
+        ),
         backgroundColor: Colors.blueGrey, // Cambia el color del AppBar
       ),
       body: Padding(
