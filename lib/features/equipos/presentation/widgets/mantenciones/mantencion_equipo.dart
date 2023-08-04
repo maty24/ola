@@ -28,41 +28,49 @@ class _ListMantenciones extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       margin: const EdgeInsets.all(8.0),
+      color: const Color(0xFFbee9e8),
       child: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Text(
-            mantencion.nombreResponsable,
-            style: const TextStyle(
-              fontSize: 18.0,
-              fontWeight: FontWeight.bold,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Responsable: ${mantencion.nombreResponsable}',
+              style: const TextStyle(
+                fontSize: 16.0,
+                fontWeight: FontWeight.bold,
+                fontFamily: 'Roboto',
+              ),
             ),
-          ),
-          const SizedBox(height: 8.0),
-          Text(
-            mantencion.empresa,
-            style: const TextStyle(
-              fontSize: 18.0,
-              fontWeight: FontWeight.bold,
+            const SizedBox(height: 8.0),
+            Text(
+              'Empresa: ${mantencion.empresa}',
+              style: const TextStyle(
+                fontSize: 16.0,
+                fontWeight: FontWeight.bold,
+                fontFamily: 'Roboto',
+              ),
             ),
-          ),
-          const SizedBox(height: 8.0),
-          Text(
-            mantencion.detalles,
-            style: const TextStyle(
-              fontSize: 18.0,
-              fontWeight: FontWeight.bold,
+            const SizedBox(height: 8.0),
+            Text(
+              'Detalles: ${mantencion.detalles}',
+              style: const TextStyle(
+                fontSize: 16.0,
+                fontWeight: FontWeight.bold,
+                fontFamily: 'Roboto',
+              ),
             ),
-          ),
-          const SizedBox(height: 8.0),
-          Text(
-            DateFormat('dd/MM/yyyy').format(mantencion.fecha),
-            style: TextStyle(
-              fontSize: 14.0,
-              color: Colors.grey[600],
+            const SizedBox(height: 8.0),
+            Text(
+               'Fecha: ${DateFormat('dd/MM/yyyy').format(mantencion.fecha)}',
+              style: TextStyle(
+                fontSize: 14.0,
+                color: Colors.grey[600],
+                fontFamily: 'Roboto',
+              ),
             ),
-          ),
-        ]),
+          ],
+        ),
       ),
     );
   }

@@ -36,9 +36,13 @@ class EquipoInformacionState extends ConsumerState<EquipoInformacion> {
     }
 
     return Scaffold(
+      backgroundColor: const Color(0xFFfffff1),
       appBar: AppBar(
-        title: const Text('Resumen del equipo'),
-        backgroundColor: Colors.blueGrey,
+        title: const Text(
+          'Resumen equipo',
+          style: TextStyle(fontSize: 20),
+        ),
+        backgroundColor: const Color(0xFFff9969),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -59,14 +63,14 @@ class EquipoInformacionState extends ConsumerState<EquipoInformacion> {
                 children: [
                   _buildButton(
                     color: Colors.green,
-                    text: 'Ver mantenciones',
+                    text: 'Mantenciones',
                     onPressed: () {
                       context.push('/mantencion/${equipo.serie}');
                     },
                   ),
                   _buildButton(
                     color: Colors.blue,
-                    text: 'Ver movimientos',
+                    text: 'Movimientos',
                     onPressed: () {
                       context.push('/movimiento/${equipo.serie}');
                     },
@@ -144,7 +148,7 @@ class _EquipoDetalle extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          equipo.nombreEquipo,
+          'Nombre: ${equipo.nombreEquipo}',
           style: const TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 20.0,
@@ -153,7 +157,7 @@ class _EquipoDetalle extends StatelessWidget {
         ),
         const SizedBox(height: 10),
         Text(
-          equipo.modelo,
+          'Modelo: ${equipo.modelo}',
           style: const TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 20.0,
@@ -162,7 +166,7 @@ class _EquipoDetalle extends StatelessWidget {
         ),
         const SizedBox(height: 10),
         Text(
-          equipo.marca,
+          'Marca: ${equipo.marca}',
           style: const TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 20.0,
@@ -171,7 +175,7 @@ class _EquipoDetalle extends StatelessWidget {
         ),
         const SizedBox(height: 10),
         Text(
-          equipo.recinto,
+          'Reciento: ${equipo.recinto}',
           style: const TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 20.0,
@@ -180,7 +184,7 @@ class _EquipoDetalle extends StatelessWidget {
         ),
         const SizedBox(height: 10),
         Text(
-          equipo.serie,
+          'Nombre: ${equipo.serie}',
           style: const TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 20.0,
