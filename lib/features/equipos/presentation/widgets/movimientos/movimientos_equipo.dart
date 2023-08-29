@@ -31,41 +31,54 @@ class _ListMovimiento extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       margin: const EdgeInsets.all(8.0),
+      color: const Color(0xFFbee9e8),
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              movimiento.nombreResponsable,
-              style: const TextStyle(
-                fontSize: 18.0,
-                fontWeight: FontWeight.bold,
-                color: Colors.blueGrey,
-              ),
-            ),
-            const SizedBox(height: 8.0),
-            Text(
-              movimiento.detalles,
+              'Responsable: ${movimiento.nombreResponsable}',
               style: const TextStyle(
                 fontSize: 16.0,
-                color: Colors.black,
+                fontWeight: FontWeight.bold,
+                fontFamily: 'Roboto',
               ),
             ),
             const SizedBox(height: 8.0),
             Text(
-              DateFormat('dd/MM/yyyy HH:mm').format(movimiento.fecha),
-              style: TextStyle(
-                fontSize: 14.0,
-                color: Colors.grey[600],
+              'Observacion ${movimiento.detalles}',
+              style: const TextStyle(
+                 fontSize: 16.0,
+                fontWeight: FontWeight.bold,
+                fontFamily: 'Roboto',
               ),
             ),
             const SizedBox(height: 8.0),
-            // added a divider
-            Divider(
-              color: Colors.grey[300],
-              height: 1.0,
-              thickness: 1.0,
+            Text(
+              'Recinto: ${movimiento.recinto}',
+              style: const TextStyle(
+                 fontSize: 16.0,
+                fontWeight: FontWeight.bold,
+                fontFamily: 'Roboto',
+              ),
+            ),
+            const SizedBox(height: 8.0),
+            Text(
+             'Fecha: ${DateFormat('dd/MM/yyyy').format(movimiento.fecha)}',
+              style: const TextStyle(
+                fontSize: 16.0,            
+                fontFamily: 'Roboto',
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+              Text(
+             'Hora: ${DateFormat('HH:mm').format(movimiento.fecha)}',
+              style: const TextStyle(
+                fontSize: 16.0,           
+                fontFamily: 'Roboto',
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ],
         ),

@@ -34,11 +34,17 @@ class MovimientoEquipoState extends ConsumerState<MovimientoEquipoScreen> {
       );
     }
     return Scaffold(
+       backgroundColor: const Color(0xFFf3f3f3),
       appBar: AppBar(
         title: Text(
           'Movientos serie ${widget.serial} ',
+          style: const TextStyle(
+              fontSize: 18.0,
+              fontWeight: FontWeight.bold,
+              fontFamily: 'Roboto',
+              color: Color(0xFFfffbba)),
         ),
-        backgroundColor: Colors.blueGrey, // Cambia el color del AppBar
+        backgroundColor: const Color(0xFFff9c08),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
