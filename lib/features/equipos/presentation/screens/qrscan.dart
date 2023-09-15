@@ -34,7 +34,7 @@ class _EquipoScannState extends State<EquipoScann> {
             child: Center(
               child: (result != null)
                   ? Text(' ${result!.code}')
-                  : const Text('Scan a code'),
+                  : const Text('Escanear  codigo QR'),
             ),
           ),
           ElevatedButton(
@@ -46,7 +46,7 @@ class _EquipoScannState extends State<EquipoScann> {
                 const Text('no data');
               }
             },
-            child: const Text('Go to scanned QR code route'),
+            child: const Text('Buscar equipo'),
           )
         ],
       ),

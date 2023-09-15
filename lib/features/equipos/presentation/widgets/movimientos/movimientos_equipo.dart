@@ -47,7 +47,7 @@ class _ListMovimiento extends StatelessWidget {
             ),
             const SizedBox(height: 8.0),
             Text(
-              'Observacion ${movimiento.detalles}',
+              'Observacion: ${movimiento.detalles}',
               style: const TextStyle(
                  fontSize: 16.0,
                 fontWeight: FontWeight.bold,

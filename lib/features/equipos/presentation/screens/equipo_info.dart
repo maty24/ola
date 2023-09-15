@@ -86,7 +86,13 @@ class EquipoInformacionState extends ConsumerState<EquipoInformacion> {
                 ),
               ),
               const SizedBox(height: 20),
-              _buildDropdown(),
+              const TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'Movimiento',
+                  labelStyle: TextStyle(fontSize: 16),
+                ),
+              ),
               const SizedBox(height: 20),
             ],
           ),
@@ -94,7 +100,7 @@ class EquipoInformacionState extends ConsumerState<EquipoInformacion> {
       ),
       floatingActionButton: _buildButton(
         color: Colors.yellow,
-        text: 'Realizado',
+        text: 'Realizar movimiento',
         onPressed: () {
           // Aquí puedes agregar la lógica para el botón de "Realizado"
         },
